@@ -23,8 +23,10 @@ fi
 ## Check out a copy of this repo (first time only) ##
 echo 'Checking out macosx-dev-environment repo...'
 git clone https://github.com/alexortizrosado/macosx-dev-environment.git ${TMPDIR} 2>/dev/null
-
+pushd ${TMPDIR} && \
+  git fetch && \
+  git reset --hard origin/master && \
+  popd
 ## Run Ansible Playbook ##
-echo 'Handing Playbook to Ansible (will require your sudo password)...'
-pushd ${TMPDIR} && git fetch && git reset --hard origin/master && popd 2>/dev/null
-ansible-playbook ${TMPDIR}/ansible/macosx_environment.yaml -i 127.0.0.1, --verbose
+echo 'Handing Playbook to Ansible...'
+ansible-playbook ./ansible/macosx_environment.yaml -i 127.0.0.1, --verbose
