@@ -30,3 +30,8 @@
       homebrew_cask: name=sublime-text3 state=present
       environment:
         HOMEBREW_CASK_OPTS: --appdir=/Applications
+
+    - name: Install GitHub Desktop
+      homebrew_cask: name=github-desktop state=present
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
