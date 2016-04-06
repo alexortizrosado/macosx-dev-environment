@@ -1,6 +1,6 @@
 # Sets up a development environment on MacOSX
 
-    bash <(curl -fsSL https://raw.githubusercontent.com/alexortizrosado/macosx-dev-environment/master/bin/bootstrap)`
+    bash <(curl -fsSL https://raw.githubusercontent.com/alexortizrosado/macosx-dev-environment/master/bootstrap)
 
 ## What gets installed?
  * [Homebrew](http://brew.sh/)
