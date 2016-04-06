@@ -4,16 +4,14 @@
 
   tasks:
 
-    - name: Check Sudo Password
-      command: ls
-      become: yes
-      become_method: sudo
-
     - name: Update Homebrew
       homebrew: update_homebrew=yes
 
     - name: Tap Caskroom
       homebrew_tap: tap=caskroom/cask
+
+    - name: Tap Versions
+      homebrew_tap: tap=caskroom/versions
 
     - name: Install Caskroom
       homebrew: name=brew-cask state=latest
@@ -23,7 +21,12 @@
       environment:
         HOMEBREW_CASK_OPTS: --appdir=/Applications
 
-    - name: Install Docker Toolbox 
-      homebrew_cast: name=dockertoolbox state=latest
- 
+    - name: Install Docker Toolbox
+      homebrew_cask: name=dockertoolbox state=present
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
 
+    - name: Install SublimeText 3
+      homebrew_cask: name=sublime-text3 state=present
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
