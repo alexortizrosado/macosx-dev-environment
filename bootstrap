@@ -27,6 +27,7 @@ pushd ${TMPDIR} && \
   git fetch && \
   git reset --hard origin/master && \
   popd
+
 ## Run Ansible Playbook ##
 echo 'Handing Playbook to Ansible...'
-ansible-playbook ./ansible/macosx_environment.yaml -i 127.0.0.1, --verbose
+ansible-playbook ${TMPDIR}/ansible/macosx_environment.yaml -i 127.0.0.1, --verbose

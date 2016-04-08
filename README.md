@@ -7,7 +7,7 @@
  * [Ansible](https://www.ansible.com/)
  * [Docker Toolbox](https://docs.docker.com/mac/step_one/)
  * [Sublime Text 3](https://www.sublimetext.com/3)
- * [GitHub Dekstop](https://desktop.github.com/)
+ * [GitHub Desktop](https://desktop.github.com/)
 
 ## TODO
  * Add sublime to .bash_profile
