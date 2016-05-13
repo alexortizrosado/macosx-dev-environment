@@ -35,3 +35,8 @@
       homebrew_cask: name=github-desktop state=present
       environment:
         HOMEBREW_CASK_OPTS: --appdir=/Applications
+
+    - name: Install Heroku Toolbelt
+      homebrew: name=heroku-toolbelt state=present
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
